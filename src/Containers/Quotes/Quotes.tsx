@@ -79,15 +79,15 @@ const Quotes = () => {
 
 
     return (
-        <Grid container spacing={2}>
-            <Grid>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div style={{ flex: '0 0 20%' }}>
                 <CategoryMenu/>
-            </Grid>
+            </div>
 
-            <Grid>
+            <div style={{ flex: '1' }}>
                 {content}
-            </Grid>
-        </Grid>
+            </div>
+        </div>
     );
 };
 
