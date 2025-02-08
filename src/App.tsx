@@ -17,7 +17,8 @@ const App = () => {
         <Routes>
             <Route path="/" element={<Quotes/>}/>
             <Route path="/quotes" element={<Quotes/>}/>
-            <Route path="/quotes/add-quote" element={<NewQuote/>}/>
+            <Route path="/quotes/:category" element={<Quotes />}/>
+            <Route path="/add-quote" element={<NewQuote/>}/>
             <Route path="/quotes/:idQuote/edit" element={<EditQuote/>}/>
             <Route path="*" element={(<h1>Page Not Found</h1>)}/>
         </Routes>

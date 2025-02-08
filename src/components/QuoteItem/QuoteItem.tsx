@@ -10,7 +10,7 @@ interface Props {
 
 const QuoteItem: React.FC<Props> = ({quote, onDeleteQuote}) => {
     return (
-        <Card variant="outlined" sx={{minWidth: 275}}>
+        <Card variant="outlined" sx={{minWidth: 400}}>
             <CardContent>
                 <Typography gutterBottom sx={{fontSize: 19}}>
                     "{quote.quoteText}"

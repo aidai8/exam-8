@@ -43,8 +43,10 @@ const QuoteForm: React.FC<Props> = ({isEdit = false, onSubmitAction, idQuote}) =
     }, [idQuote, navigate]);
 
     useEffect(() => {
-       void fetchOneQuote();
-    }, [fetchOneQuote]);
+        if (isEdit && idQuote) {
+            void fetchOneQuote();
+        }
+    }, [fetchOneQuote, isEdit, idQuote]);
 
     const onSubmit = (e: FormEvent) => {
         e.preventDefault();
